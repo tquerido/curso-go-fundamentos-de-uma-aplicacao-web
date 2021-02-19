@@ -1,0 +1,13 @@
+version: '2'
+services:
+  postgres:
+    network_mode: host
+    image: postgres:9.6-alpine
+    hostname: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=lojadb
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    container_name: curso_go_lojadb
